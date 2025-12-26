@@ -16,7 +16,7 @@ export const InputField = ({
   return (
     <div className="space-y-2">
       <Label htmlFor={name} className="form-label">
-        Label
+        {label}
       </Label>
       <Input
         type={type}
