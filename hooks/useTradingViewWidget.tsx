@@ -16,7 +16,7 @@ const useTradingViewWidget = ({ config, height = 600, scriptUrl }: Props) => {
     if (containerRef.current.dataset.loaded) return;
     containerRef.current.innerHTML = `<div class="tradingview-widget-container__widget_style="width: 100%; height: ${height}px;"></div>`;
     const script = document.createElement("script");
-    script.src = scriptUrl; // "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
+    script.src = scriptUrl;
     script.async = true;
     script.innerHTML = JSON.stringify(config);
     containerRef.current.appendChild(script);
